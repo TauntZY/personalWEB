@@ -1,0 +1,414 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:"黑体";
+}
+#musicCon{
+    width: 740px;
+    height:470px;
+    /*margin: 0px 0px;*/
+    /*background-color: pink;*/
+    position: relative;
+    left:-370px;
+    /*设置z-index时要特别注意，负值会带来一些副作用，比如a标签鼠标悬停变成小手的效果失效*/
+    z-index: 1;
+
+}
+/*播放栏样式*/
+#musicCon #music_play{
+    width:370px;
+    height: 470px;
+    background-color: #00BBFF;
+    float: left;
+    z-index: 3;
+}
+#musicCon #music_play p{
+    width: 370px;
+    height:60px;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+    /*alpha:0.5;*/
+    background-color: #b3e9ff;
+}
+#musicCon #music_play img{
+    display: block;/*将图片设为块级元素，*/
+}
+#musicCon #music_play .btn{
+    width:370px;
+    height:110px;
+    /*background-color: red;*/
+}
+#musicCon #music_play .btn p{
+    width:140px;
+    height:35px;
+    margin: 35px auto;
+    padding-top: 0px;
+}
+#musicCon #music_play .btn p span{
+    display: block;
+    width: 35px;
+    height: 35px;
+    /*border-right: 1px solid #c0c0c0;*/
+    float:left;
+    background-image:url("../images/sm_icon.png") ;
+}
+#musicCon #music_play .btn p span a{
+    display: block;
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+    /*border-right: 1px solid #c0c0c0;*/
+    float:left;
+}
+#musicCon #music_play #closeList{
+    position: absolute;
+    width: 35px;
+    height: 20px;
+    top:5px;
+    left: 335px;
+    /*background-color: #ff0000;*/
+}
+#musicCon #music_play #closeList a{
+    display: block;
+    width: 40px;
+    height: 30px;
+    text-decoration: none;
+    color:lightseagreen;
+}
+
+#musicCon #music_play .btn p span.prev{
+    background-position: -43px 8px;
+}
+#musicCon #music_play .btn p span.play{
+    width: 25px;
+    height: 28px;
+    background-position: -75px 2px;
+    margin-top: 4px;
+    margin-left: 23px;
+}
+#musicCon #music_play .btn p span.pause{
+    width: 25px;
+    height: 28px;
+    background-position: -96px 2px;
+    margin-top: 4px;
+    margin-left: 23px;
+}
+#musicCon #music_play .btn p span.next{
+    width: 33px;
+    background-position: -120px 8px;
+    margin-left: 24px;
+}
+
+
+/*音乐列表栏样式*/
+#musicCon #music_list{
+    width: 370px;
+    height: 470px;
+    background-color: #f5ff07;
+    float: left;
+    position: relative;
+    left:-370px;
+    z-index: -1;
+}
+#musicCon #music_list h3{
+    width: 369px;
+    height:60px;
+    margin-left: 0px;
+    border-left:1px solid #aaa795;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 60px;
+    /*alpha:0.5;*/
+    background-color: #b3e9ff;
+}
+
+
+#musicCon #music_list ul li{
+    /*height: 25.625px;*/
+    height: 39px;
+    border:1px solid #000000;
+    background: url("../images/bg4.png");
+    list-style: none;
+    display: block;
+    line-height: 39px;
+    font-size: 16px;
+    color: #aaaaaa;
+}
+#musicCon #music_list ul li a{
+    display: block;
+    text-decoration: none;
+    /*color:  #aaaaaa;*/
+    color: #888888;
+    lne-height:39px;
+    font-size: 16px;
+    background: url("../images/play.png") no-repeat;
+    background-position: 15px 10px ;
+    text-indent: 40px;
+}
+#musicCon #music_list ul li a:hover{
+    color: #FFFFFF;
+}
+#musicCon #music_list ul li.active a{
+    background: url("../images/pause.png") no-repeat;
+    background-position: 15px 10px ;
+    text-indent: 40px;
+    border-bottom: 1px solid #ff776b;
+    color: #FFFFFF;
+}
+/*===========隐藏整个音乐窗口按钮==============*/
+#closeMusic{
+    display: block;
+    width: 20px;
+    height: 100px;
+    float:left;
+    position: relative;
+    left: 370px;
+    bottom:471px;
+    /*=====加载闪亮动画=======*/
+    animation:close_btn1 0.5s alternate infinite;
+    animation-direction:alternate;
+    -webkit-animation:close_btn1 0.5s infinite;
+    -moz-animation:close_btn1 0.5s infinite;
+    -o-animation:close_btn1 0.5s infinite;
+    -webkit-animation-direction:alternate;
+    -moz-animation-direction:alternate;
+    -o-animation-direction:alternate;
+}
+#closeMusic #btn {
+    width: 20px;
+    height: 100px;
+    background-color:#030303 ;
+    overflow: hidden;
+}
+#closeMusic #btn a{
+     margin: 0px;
+     padding: 0px;
+     display: block;
+     text-decoration: none;
+     text-align:center ;
+     width: 20px;
+     height: 100px;
+     color:#d421ff;
+     position: relative;
+
+     animation:close_btn_a 4s infinite;
+     -webkit-animation:close_btn_a 4s infinite;
+     -moz-animation:close_btn_a 4s infinite;
+     -o-animation:close_btn_a 4s infinite;
+ }
+#closeMusic #btn a span{
+    margin: 0px;
+    padding: 0px;
+    display: block;
+    width: 20px;
+    height: 100px;
+    color:#d421ff;
+    position: relative;
+    top:100px;
+
+    animation:close_btn_a_span 4s infinite;
+    -webkit-animation:close_btn_a_span 4s infinite;
+    -moz-animation:close_btn_a_span 4s infinite;
+    -o-animation:close_btn_a_span 4s infinite;
+}
+/*#closeMusic:hover{*/
+    /*animation: close_btn 0.5s;*/
+    /*-webkit-animation: close_btn 0.2s;*/
+    /*-moz-animation: close_btn 0.2s;*/
+    /*-o-animation: close_btn 0.2s;*/
+/*}*/
+/*======close按钮的旋转动画(弃用)=========*/
+@keyframes close_btn{
+   from{
+       transform:rotate(0deg);
+       -ms-transform:rotate(0deg); /* Internet Explorer */
+       -moz-transform:rotate(0deg); /* Firefox */
+       -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+       -o-transform:rotate(0deg); /* Opera */
+
+   }
+    to{
+        transform:rotate(720deg);
+        -ms-transform:rotate(720deg); /* Internet Explorer */
+        -moz-transform:rotate(720deg); /* Firefox */
+        -webkit-transform:rotate(720deg); /* Safari 和 Chrome */
+        -o-transform:rotate(720deg); /* Opera */
+
+    }
+}
+@-webkit-keyframes close_btn{
+    from{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg); /* Internet Explorer */
+        -moz-transform:rotate(0deg); /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+
+    }
+    to{
+        transform:rotate(720deg);
+        -ms-transform:rotate(720deg); /* Internet Explorer */
+        -moz-transform:rotate(720deg); /* Firefox */
+        -webkit-transform:rotate(720deg); /* Safari 和 Chrome */
+        -o-transform:rotate(720deg); /* Opera */
+
+    }
+}
+@-o-keyframes close_btn{
+    from{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg); /* Internet Explorer */
+        -moz-transform:rotate(0deg); /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+
+    }
+    to{
+        transform:rotate(720deg);
+        -ms-transform:rotate(720deg); /* Internet Explorer */
+        -moz-transform:rotate(720deg); /* Firefox */
+        -webkit-transform:rotate(720deg); /* Safari 和 Chrome */
+        -o-transform:rotate(720deg); /* Opera */
+
+    }
+}
+@-moz-keyframes close_btn{
+    from{
+        transform:rotate(0deg);
+        -ms-transform:rotate(0deg); /* Internet Explorer */
+        -moz-transform:rotate(0deg); /* Firefox */
+        -webkit-transform:rotate(0deg); /* Safari 和 Chrome */
+        -o-transform:rotate(0deg); /* Opera */
+
+    }
+    to{
+        transform:rotate(720deg);
+        -ms-transform:rotate(720deg); /* Internet Explorer */
+        -moz-transform:rotate(720deg); /* Firefox */
+        -webkit-transform:rotate(720deg); /* Safari 和 Chrome */
+        -o-transform:rotate(720deg); /* Opera */
+
+    }
+}
+/*======close按钮的闪亮动画(弃用)=========*/
+@keyframes close_btn1{
+    from{width: 20;}
+    to{width: 30;}
+}
+@-webkit-keyframes close_btn1{
+    from{width: 20;}
+    to{width: 30;}
+}
+@-o-keyframes close_btn1{
+    from{width: 20;}
+    to{width: 30;}
+}
+@-moz-keyframes close_btn1{
+    from{width: 20;}
+    to{width: 30;}
+}
+/*=========隐藏按钮的特效============*/
+@keyframes close_btn_a_span{
+    from{top:100px;}
+    to{top:5px;}
+}
+@-webkit-keyframes close_btn_a_span{
+    from{top:100px;}
+    to{top:5px;}
+}
+@-moz-keyframes close_btn_a_span{
+    from{top:100px;}
+    to{top:5px;}
+}
+@-o-keyframes close_btn_a_span{
+    from{top:100px;}
+    to{top:5px;}
+}
+
+
+/*给音乐歌曲列表添加滚动条*/
+.scrollbar
+{
+    margin-left: 0px;
+    float: left;
+    height: 410px;
+    width: 370px;
+    background: #F5F5F5;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+}
+
+.force-overflow
+{
+    min-height: 450px;
+}
+
+/*
+    * custom_style定义样式
+    ::-webkit-scrollbar 滚动条整体部分
+    ::-webkit-scrollbar-thumb  滚动条里面的小方块，能向上向下移动（或往左往右移动，取决于是垂直滚动条还是水平滚动条）
+    ::-webkit-scrollbar-track  滚动条的轨道（里面装有Thumb）
+    ::-webkit-scrollbar-button 滚动条的轨道的两端按钮，允许通过点击微调小方块的位置。
+    ::-webkit-scrollbar-track-piece 内层轨道，滚动条中间部分（除去）
+    ::-webkit-scrollbar-corner 边角，即两个滚动条的交汇处
+    ::-webkit-resizer 两个滚动条的交汇处上用于通过拖动调整元素大小的小控件
+*/
+
+#custom_style::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #f5ebf5;
+}
+
+#custom_style::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#custom_style::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #84f5d6;
+}
+#custom_style::-webkit-scrollbar-button
+{
+    width: 10px;
+    height:15px;
+    border-radius: 10px;
+    background-color: #ffb05b;
+}
+
+#custom_style::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #f5ebf5;
+}
+
+#custom_style::-moz-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+#custom_style::-moz-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #84f5d6;
+}
+#custom_style::-moz-scrollbar-button
+{
+    width: 10px;
+    height:15px;
+    border-radius: 10px;
+    background-color: #ffb05b;
+}
+
+

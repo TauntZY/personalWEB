@@ -1,0 +1,381 @@
+/*清除样式*/
+body{
+    margin:0px;
+    padding: 0px;
+}
+
+/*header样式*/
+#header{
+    height: 70px;
+    border-bottom: solid 1px #C6C6C6;
+}
+#header #logo{
+    float: left;
+    width: 183px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+#header #logo a{
+
+     display: inline-block;
+}
+#header #search{
+    float: right;
+    margin-right: 120px;
+    margin-top: 20px;
+}
+
+/*content样式*/
+#content{
+    clear: both;
+    height: 1295px;
+    background-color: rgb(249, 249, 249);
+    border-bottom:solid 1px #C6C6C6 ;
+}
+/*=======================================*/
+#content #nav{
+    height: 65px;
+    width: 960px;
+    padding-top: 20px;
+    padding-left: 120px;
+    background: url("../images/nav_bg_03.png") no-repeat;
+    background-position: 120px 20px;
+
+
+}
+#content #nav li{
+    font-size: 14px;
+    text-align: center;
+    line-height: 59px;
+    font-family: 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    float:left;
+
+    padding-left: 30px;
+}
+#content #nav li a{
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: black;
+}
+#content #nav li a:hover{
+    color: #c800ff;
+}
+/*=======================================*/
+#content #playHeader{
+    width: 1110px;
+    height: 40px;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 25px;
+    position: relative;
+}
+#content #playHeader #playName{
+    float: left;
+}
+#content #playHeader #playName p{
+    display: inline;
+    font-size: 26px;
+}
+#content #playHeader #shares{
+    float: right;
+}
+#content #play{
+    height: 545px;
+    width: 1110px;
+    background: #65AAF8;
+    position: relative;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top:20px;
+}
+
+#content #playlist{
+    height: 562px;
+    width: 1110px;
+    /*background: #ff5ff0;*/
+    position: absolute;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 20px;
+}
+/*=======================================*/
+#content #playlist #listNav{
+    width: 1110px;
+    height: 50px;
+    border-bottom: solid 1px #C6C6C6;
+}
+#content #playlist #listNav ul{
+    margin: 0px;
+    padding: 0px;
+}
+#content #playlist #listNav ul li{
+    list-style-type: none;
+    float: left;
+    margin-right: 20px;
+}
+#content #playlist #listNav ul li a{
+    color: #5c5f5e;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 26px;
+    text-align: center;
+}
+#content #playlist #listNav ul .active{
+    border-bottom: solid 5px #f50302;
+    border-radius: 15px;
+}
+#content #playlist #listNav ul li:hover{
+    border-bottom: solid 5px #c500ff;
+    border-radius: 15px;
+
+}
+/*=======================================*/
+#content #playlist #listContent{
+    width: 1110px;
+    height:510px;
+    float: left;
+    /*border:3px solid #000000;*/
+    overflow: hidden;
+    position: relative;
+}
+#content #playlist #listContent .turnLR ,.turnLR a{
+    display:block;
+    width: 11px;
+    height: 19px;
+    position: absolute;
+    z-index: 999;
+}
+#content #playlist #listContent #turnLeft{
+    /*margin-top: 245.5px;*/
+    /*margin-left: 20px;*/
+    top:245.5px;
+    left:20px;
+}
+#content #playlist #listContent #turnRight{
+    /*margin-top: 245.5px;*/
+    /*margin-left: 1080px;*/
+    top:245.5px;
+    right:20px;
+}
+#content #playlist #listContent #list .list{
+    width: 1110px;
+    height:510px;
+    float: left;
+
+}
+#content #playlist #listContent #list{
+    display: block;
+    position: relative;
+    width: 4440px;
+    height:510px;
+    left:0px;
+}
+
+#content #playlist #listContent #list #list1{
+    /*background: #00f55c;*/
+}
+#content #playlist #listContent #list #list2{
+    /*background: #2d69f5;*/
+}
+#content #playlist #listContent #list #list3{
+    /*background: #f5c900;*/
+}
+#content #playlist #listContent #list #list4{
+    /*background: #f50302;*/
+}
+/*=================list1的样式=====================*/
+#content #playlist #listContent #list #list1 .listContent{
+    height: 220px;
+    width: 316.7px;
+    border: 1px solid red;
+}
+#content #playlist #listContent #list #list1 #listContent1,#listContent2,#listContent3{
+    float:left;
+}
+
+#content #playlist #listContent #list #list1 #listContent4,#listContent5,#listContent6{
+    float:left;
+}
+#content #playlist #listContent #list #list1 #listContent4{
+    margin-left:55px;
+}
+
+#content #playlist #listContent #list #list1 #listContent1,#listContent2,#listContent3,#listContent4,#listContent5,#listContent6{
+    margin: 15px 10px;
+    background-image: url("../images/listCON2.JPG");
+}
+#content #playlist #listContent #list #list1 #listContent1{
+    margin-left:55px;
+}
+/*=================list2的样式=====================*/
+#content #playlist #listContent #list #list2 .listContent{
+    height: 220px;
+    width: 316.7px;
+    border: 1px solid red;
+}
+#content #playlist #listContent #list #list2 #listContent7,#listContent8,#listContent9{
+    float:left;
+}
+
+#content #playlist #listContent #list #list2 #listContent10,#listContent11,#listContent12{
+    float:left;
+}
+#content #playlist #listContent #list #list2 #listContent10{
+    margin-left:55px;
+}
+
+#content #playlist #listContent #list #list2 #listContent7,#listContent8,#listContent9,#listContent10,#listContent11,#listContent12{
+    margin: 15px 10px;
+    background-image: url("../images/listCON1.jpg");
+}
+#content #playlist #listContent #list #list2 #listContent7 {
+    margin-left:55px;
+}
+/*=================list3的样式=====================*/
+#content #playlist #listContent #list #list3 .listContent{
+    height: 220px;
+    width: 316.7px;
+    border: 1px solid red;
+}
+#content #playlist #listContent #list #list3 #listContent13,#listContent14,#listContent15{
+    float:left;
+}
+
+#content #playlist #listContent #list #list3 #listContent16,#listContent17,#listContent18{
+    float:left;
+}
+#content #playlist #listContent #list #list3 #listContent16{
+    margin-left:55px;
+}
+
+#content #playlist #listContent #list #list3 #listContent13,#listContent14,#listContent15,#listContent16,#listContent17,#listContent18{
+    margin: 15px 10px;
+    background-image: url("../images/listCON3.jpg");
+}
+#content #playlist #listContent #list #list3 #listContent13 {
+    margin-left:55px;
+}
+
+/*=================list4的样式=====================*/
+#content #playlist #listContent #list #list4 .listContent{
+    height: 220px;
+    width: 316.7px;
+    border: 1px solid red;
+}
+#content #playlist #listContent #list #list4 #listContent19,#listContent20,#listContent21{
+    float:left;
+}
+
+#content #playlist #listContent #list #list4 #listContent22,#listContent23,#listContent24{
+    float:left;
+}
+#content #playlist #listContent #list #list4 #listContent22{
+    margin-left:55px;
+}
+
+#content #playlist #listContent #list #list4 #listContent19,#listContent20,#listContent21,#listContent22,#listContent23,#listContent24{
+    margin: 15px 10px;
+    background-image: url("../images/listCON4.jpg");
+    background-position: center;
+}
+#content #playlist #listContent #list #list4 #listContent19 {
+    margin-left:55px;
+}
+/*footer样式*/
+#footer{
+    height: 378px;
+}
+
+#footer #fcon{
+    height:278px;
+    width: 1110px;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+/*=======================================*/
+#footer #fcon #discover{
+    width: 370px;
+    height: 278px;
+    /*background: red;*/
+    float: left;
+    position: relative;
+}
+#footer #fcon #discover #ul1 li{
+    list-style-type: none;
+    margin-top: 10px;
+    color: #5c5f5e;
+}
+#footer #fcon #discover #ul2{
+    float: right;
+    position: absolute;
+    top:40px;
+    right: 45px;
+}
+#footer #fcon #discover #ul2 li{
+    list-style-type: none;
+    margin-top: 10px;
+    color: #5c5f5e;
+}
+/*=======================================*/
+#footer #fcon #newVideo{
+    width: 370px;
+    height: 278px;
+    /*background: #000000;*/
+    float: left;
+    position: relative;
+}
+#footer #fcon #newVideo #img1{
+    display:block;
+    margin-top: 50px;
+}
+#footer #fcon #newVideo #newCon1{
+    position: absolute;
+    top:45px;
+    right: 110px;
+}
+#footer #fcon #newVideo #newCon2{
+    position: absolute;
+    top:160px;
+    right: 110px;
+
+}
+#footer #fcon #newVideo #newCon1,#newCon2 p{
+    font-size: 10px;
+    color: #5c5f5e;
+}
+
+
+/*=======================================*/
+#footer #fcon #maillingList{
+    width: 370px;
+    height: 278px;
+    /*background: blanchedalmond;*/
+    float: left;
+}
+/*=======================================*/
+#footer #time{
+    height: 100px;
+    border-top:solid 1px #C6C6C6 ;
+}
+#footer #time span{
+    display: block;
+    width: 77px;
+    height:20px;
+    background-image: url("../images/Vidfoot_06.png");
+    color: red;
+    font-size: 10px;
+    text-align: center;
+    line-height: 20px;
+    margin-left:120px;
+    margin-top:40px;
+}
+#footer #time img{
+    display: block;
+    margin-right: 120px;
+    margin-top: -25px;
+    float: right;
+}
