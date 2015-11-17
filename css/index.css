@@ -2,10 +2,11 @@
     margin:0px;
     paddig:0px;
 }
+/*头部样式*/
 #header{
     width:100%;
     height:200px;
-    border: 1px solid #000000;
+    /*border: 1px solid #000000;*/
     /*background-color: #d8e0da;*/
     background: url("../images/Hbg_1.jpg") repeat;
     /*background-size: cover;*/
@@ -58,50 +59,158 @@
     /*border-bottom: 25px solid red;*/
 /*}*/
 
-#header #nav{
+/*弃用的样式1*/
+/*#header #nav{*/
+    /*width: 740px;*/
+    /*height:35px;*/
+    /*position: relative;*/
+    /*bottom: -130px;*/
+    /*float: right;*/
+/*}*/
+/*#header #nav ul li{*/
+    /*width: 80px;*/
+    /*border-radius: 25px;*/
+    /*height: 35px;*/
+    /*float: left;*/
+    /*margin-left: 50px;*/
+    /*text-align: center;*/
+    /*line-height: 35px;*/
+    /*display: block;*/
+    /*background: #4b59ff;*/
+    /*box-shadow: 8px -2px 10px;*/
+    /*list-style-type: none;*/
+/*}*/
+/*#header #nav ul li:hover{*/
+    /*width: 80px;*/
+    /*border-radius: 25px;*/
+    /*height: 50px;*/
+    /*float: left;*/
+    /*margin-left: 50px;*/
+    /*text-align: center;*/
+    /*line-height: 50px;*/
+    /*display: block;*/
+    /*background: #4b59ff;*/
+    /*box-shadow: 8px -2px 10px;*/
+    /*list-style-type: none;*/
+/*}*/
+/*#header #nav ul li a{*/
+    /*text-decoration: none;*/
+    /*color: #000000;*/
+/*}*/
+/*#header #nav{*/
+    /*animation:nav_p 2s ease;*/
+    /*-webkit-animation:nav_p 2s ease;*/
+/*}*/
+
+/*#header #nav ul li a:hover{*/
+    /*color: #ffa241;*/
+/*}*/
+
+/*新的样式*/
+#header #nav {
     width: 740px;
-    height:35px;
+    height: 35px;
     position: relative;
     bottom: -130px;
     float: right;
 }
-#header #nav ul li{
+
+#header #nav ul li {
     width: 80px;
-    border-radius: 25px;
+    /*border-radius: 25px;*/
+    border-radius: 5px;
     height: 35px;
     float: left;
     margin-left: 50px;
     text-align: center;
     line-height: 35px;
     display: block;
-    background: #4b59ff;
+    background: #ff009c;
     box-shadow: 8px -2px 10px;
     list-style-type: none;
-}
-#header #nav ul li:hover{
-    width: 80px;
-    border-radius: 25px;
-    height: 50px;
-    float: left;
-    margin-left: 50px;
-    text-align: center;
-    line-height: 50px;
-    display: block;
-    background: #4b59ff;
-    box-shadow: 8px -2px 10px;
-    list-style-type: none;
-}
-#header #nav ul li a{
-    text-decoration: none;
-    color: #000000;
-}
-#header #nav{
-    animation:nav_p 2s ease;
-    -webkit-animation:nav_p 2s ease;
+    border: 1px solid #000000;
+    /*overflow: hidden;*/
+    perspective:150;
+    -webkit-perspective:150; /*目前只有chrome支持*/
+    -o-perspective:150;
+    -moz-perspective:150;
 }
 
-#header #nav ul li a:hover{
-    color: #ffa241;
+#header #nav ul li a{
+    display: block;
+    width: 80px;
+    height: 35px;
+    background: #292c2b;
+    border-radius: 5px;
+    position: absolute;
+    float: left;
+    text-decoration: none;
+    color: #cccccc;
+}
+#header #nav ul li a.nav_ul_a{
+    display: block;
+    width: 78px;
+    height: 33px;
+    background: #ff009c;
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    text-decoration: none;
+    /*color: #6dff00;*/
+    color: #02b614;
+    bottom: 0px;
+    z-index: 100;
+
+    transform-origin:bottom;
+    -webkit-transform-origin:bottom;
+    transform:rotate(-90deg);
+    -webkit-transform:rotateX(-90deg);
+    -moz-transform:rotateX(-90deg);
+    -o-transform:rotateX(-90deg);
+}
+/*鼠标进入时的样式*/
+#header #nav ul li a.inA{
+    display: block;
+    width: 78px;
+    height: 33px;
+    background: #ff009c;
+    border: 1px #000000 solid;
+    border-radius: 5px;
+    position: relative;
+    float: left;
+    text-decoration: none;
+    /*color: #6dff00;*/
+    color: #02b614;
+    bottom: 0px;
+    z-index: 100;
+
+    transform-origin:bottom;
+    -webkit-transform-origin:bottom;
+    -moz-transform-origin:bottom;
+    -o-transform-origin:bottom;
+
+    transform:rotateX(0deg);
+    -webkit-transform:rotateX(0deg);
+    -moz-transform:rotateX(0deg);
+    -o-transform:rotateX(0deg);
+
+    animation:aAniIn 0.5s;
+    -webkit-animation:aAniIn 0.5s;
+}
+
+/*内容样式*/
+#Con{
+    background: url("http://web.ptjy.com/web/usersite/xyxdjzx/UploadFiles/20121009215629116.jpg") no-repeat;
+    background-position: 0px -8px;
+    background-color: #E0EDF6;
+}
+#Con #content{
+    width: 960px;
+    height:1600px;
+    /*background-color:white;*/
+    margin:-470px auto;
+    position:relative;
 }
 
 /*动画*/
@@ -141,5 +250,78 @@
         left:500px;
         transform:rotate(360deg);
         opacity: 0.5;
+    }
+}
+/*===in==*/
+@keyframes aAniIn{
+    0%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(-90deg);
+        -webkit-transform:rotateX(-90deg);
+        -moz-transform:rotateX(-90deg);
+        -o-transform:rotateX(-90deg);
+    }
+    100%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(0deg);
+        -webkit-transform:rotateX(0deg);
+        -moz-transform:rotateX(0deg);
+        -o-transform:rotateX(0deg);
+    }
+}
+@-webkit-keyframes aAniIn{
+    0%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(-90deg);
+        -webkit-transform:rotateX(-90deg);
+        -moz-transform:rotateX(-90deg);
+        -o-transform:rotateX(-90deg);
+    }
+    100%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(0deg);
+        -webkit-transform:rotateX(0deg);
+        -moz-transform:rotateX(0deg);
+        -o-transform:rotateX(0deg);
+    }
+}
+@-moz-keyframes aAniIn{
+    0%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(-90deg);
+        -webkit-transform:rotateX(-90deg);
+        -moz-transform:rotateX(-90deg);
+        -o-transform:rotateX(-90deg);
+    }
+    100%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(0deg);
+        -webkit-transform:rotateX(0deg);
+        -moz-transform:rotateX(0deg);
+        -o-transform:rotateX(0deg);
+    }
+}
+@-o-keyframes aAniIn{
+    0%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(-90deg);
+        -webkit-transform:rotateX(-90deg);
+        -moz-transform:rotateX(-90deg);
+        -o-transform:rotateX(-90deg);
+    }
+    100%{
+        transform-origin:bottom;
+        -webkit-transform-origin:bottom;
+        transform:rotate(0deg);
+        -webkit-transform:rotateX(0deg);
+        -moz-transform:rotateX(0deg);
+        -o-transform:rotateX(0deg);
     }
 }

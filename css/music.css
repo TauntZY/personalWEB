@@ -3,12 +3,14 @@
     padding:0px;
     font-family:"黑体";
 }
-#musicCon{
+#Con #musicCon{
     width: 740px;
     height:470px;
     /*margin: 0px 0px;*/
     /*background-color: pink;*/
     position: relative;
+    /*bottom: 0px;*/
+    /*top:200px;*/
     left:-370px;
     /*设置z-index时要特别注意，负值会带来一些副作用，比如a标签鼠标悬停变成小手的效果失效*/
     z-index: 1;
