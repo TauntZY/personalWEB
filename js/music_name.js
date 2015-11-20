@@ -19,11 +19,13 @@ addonloadEvent(pName);
 
 function pName(){
     var li = document.getElementsByClassName("active");
+
     var p = document.getElementById("pName");
     var a =  li[0].childNodes;
 //    alert(a.length); //3,浏览器会将空额也当成一个节点,因此在操作前应该现将空格去除
     a = filterSpaceNode(a);
     var aName = a[0].innerHTML;
+    a[0].focus();
     p.innerHTML = aName;
     return p;
 }

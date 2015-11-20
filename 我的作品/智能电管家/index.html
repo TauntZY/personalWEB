@@ -92,8 +92,7 @@
                     </ul>
                 </div>
             </div>
-            <div id="content_div4">
-            </div>
+            <div id="content_div4"></div>
             <div id="content_div5">
                 <p id="content_div55_p1">前言咨询</p>
                 <p id="content_div5_p2">Frontier information</p>
@@ -189,7 +188,57 @@
                 </ul>
             </div>
             <div id="content_div7">
-
+                <p id="content_div7_p1">联系我们</p>
+                <p id="content_div7_p2">Contact us</p>
+                <p id="content_div7_p3">
+                    在一切开始之前，先说说您的需求吧
+                </p>
+                <div id="content_div7_form">
+                    <form  id="form" style="font-size: 20px" action="submit.html" method="post">
+                        <input name="name" type="text"  placeholder="你的姓名"><br/>
+                        <input name="phone" type="text"  placeholder="你的联系电话"><br/>
+                        <input name="email" type="text"  placeholder="你的邮箱"><br/>
+                        <textarea name="demand" rows="4" cols="1" placeholder="你的需求"></textarea>
+                        <button id="btn">提交</button>
+                    </form>
+                </div>
+                <div id="content_div7_contactWay">
+                    <ul>
+                        <li>
+                            <span id="li_span1"></span>
+                            <a>地址：厦门市思明区软件园二区望海路16号之三3楼</a>
+                        </li>
+                        <li>
+                            <span id="li_span2"></span>
+                            <a>热线：400-855-0091</a>
+                        </li>
+                        <li>
+                            <span id="li_span3"></span>
+                            <a>电话：86-0592-5955168</a>
+                        </li>
+                        <li>
+                            <span id="li_span4"></span>
+                            <a>传真：86-0592-5146486</a>
+                        </li>
+                        <li>
+                            <span id="li_span5"></span>
+                            <a>邮编：361000</a>
+                        </li>
+                        <li>
+                            <span id="li_span6"></span>
+                            <a>邮箱：sales@f-create.com.cn</a>
+                        </li>
+                        <li>
+                            <span id="li_span7"></span>
+                            <a>网址：http://www.fcreate.com.cn</a>
+                        </li>
+                    </ul>
+                </div>
+                <script>
+                    document.getElementById("btn").onclick = function(){
+                        alert("提交成功");
+                    }
+                </script>
             </div>
         </div><!--头部结束-->
 

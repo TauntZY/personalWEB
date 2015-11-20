@@ -463,6 +463,186 @@ body,ul,li,span,p{
     margin-left: 506.5px;
     margin-top: 115px;
 }
+/*div7的内容样式*/
+#content #content_div7{
+    background: url("../images/contact_02.png") no-repeat;
+    position: relative;
+}
+#content #content_div7 p{
+    color: #24251f;
+    font-family: "Microsoft YaHei", sans-serif;
+    font-size: 30px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 608px;
+    margin-top: 15px;
+}
+#content #content_div7 #content_div7_p2{
+    color: #999999;
+    font-size: 17px;
+    margin-left: 625px;
+    margin-top: 60px;
+}
+#content #content_div7 #content_div7_p3{
+    color: #f2f2f2;
+    font-size: 17px;
+    margin-left: 532px;
+    margin-top: 95px;
+}
+#content #content_div7 #content_div7_form{
+    height: 240px;
+    width: 400px;
+    position: absolute;
+    background-color: red;
+    top:130px;
+    left:250px;
+}
+#content #content_div7 #content_div7_form form{
+
+}
+#content #content_div7 #content_div7_form input{
+    border: 0px;
+    width: 400px;
+    height: 35px;
+    font-size: 18px!important;
+    background-color: #5bb3e2;
+    border-bottom:2px solid #4185e2;
+}
+#content #content_div7 #content_div7_form input::-webkit-input-placeholder{
+    width: 400px!important;
+    height: 35px!important;
+    font-size: 18px!important;
+    color: #4b4e4d;
+    font-size: 18px!important;
+    font-family: "微软雅黑";
+}
+#content #content_div7 #content_div7_form input::-moz-placeholder{
+    width: 400px!important;
+    height: 35px!important;
+    font-size: 18px!important;
+    color: #4b4e4d;
+    font-size: 18px!important;
+    font-family: "微软雅黑";
+}
+#content #content_div7 #content_div7_form textarea{
+    border: 0px;
+    width: 396px;
+    height: 80px;
+    font-size: 18px!important;
+    background-color: #5bb3e2;
+    border-bottom:2px solid #4185e2;
+    font-family: "微软雅黑";
+}
+#content #content_div7 #content_div7_form textarea::-webkit-input-placeholder{
+    width: 400px!important;
+    height: 37px!important;
+    color: #4b4e4d;
+    font-size: 18px!important;
+    font-family: "微软雅黑";
+}
+#content #content_div7 #content_div7_form textarea::-moz-placeholder{
+    width: 400px!important;
+    height: 37px!important;
+    color: #4b4e4d;
+    font-size: 18px!important;
+    font-family: "微软雅黑";
+}
+#content #content_div7 #content_div7_form button{
+    border: 0px;     /* 清除button原有的样式*/
+    width: 400px;
+    height: 37px;
+    background-color: #ff8100;
+    border-bottom:2px solid #4185e2;
+    font-family: "微软雅黑";
+    font-size: 18px!important;
+}
+
+#content #content_div7 #content_div7_form input:focus{
+    background-color: white;
+}
+#content #content_div7 #content_div7_form textarea:focus{
+    background-color: white;
+}
+    /*联系方式*/
+#content #content_div7 #content_div7_contactWay{
+    height: 240px;
+    width: 420px;
+    position: absolute;
+    /*background-color: red;*/
+    top:130px;
+    right:250px;
+}
+#content #content_div7 #content_div7_contactWay ul li{
+    display: block;
+    list-style: none;
+    width: 420px;
+    height: 32.2857px;
+    /*border-bottom:1px solid #000000 ;*/
+    padding-bottom:2px ;
+}
+#content #content_div7 #content_div7_contactWay ul li span{
+    display: block;
+    list-style: none;
+    width: 42px;
+    height: 33.2857px;
+    background: url("../images/contact_logo.png") ;
+
+}
+#content #content_div7 #content_div7_contactWay ul li span:hover{
+    /*width: 84px;*/
+    animation:contactAni 1s;
+    -webkit-animation:contactAni 1s;
+    -moz-animation:contactAni 1s;
+    -o-animation:contactAni 1s;
+}
+
+
+
+#content #content_div7 #content_div7_contactWay ul li #li_span1{
+    background-position:0px -5px ;
+}
+#content #content_div7 #content_div7_contactWay ul li #li_span2{
+    background-position:0px -46px ;
+}
+#content #content_div7 #content_div7_contactWay ul li #li_span3{
+    background-position:0px -46px ;
+}
+#content #content_div7 #content_div7_contactWay ul li #li_span4{
+    background-position:0px -135px ;
+}
+#content #content_div7 #content_div7_contactWay ul li #li_span5{
+    background-position:0px -175px ;
+}
+#content #content_div7 #content_div7_contactWay ul li #li_span6{
+    background-position:0px -175px ;
+}
+#content #content_div7 #content_div7_contactWay ul li #li_span7{
+    background-position:0px -263px ;
+}
+
+#content #content_div7 #content_div7_contactWay ul li a{
+    display: block;
+    width: 360px;
+    height: 33.2857px;
+    position: relative;
+    top:-33.2857px;
+    right: -25px;
+    float: right;
+    line-height: 33px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -915,9 +1095,27 @@ body,ul,li,span,p{
     }
 }
 
-
-
-
+/*联系栏上的图标动画*/
+@keyframes contactAni{
+    /*
+    from{width: 42px;}
+    to{width: 60px}
+    */
+    from{margin-left: 0px}
+    to{margin-left: 21px}
+}
+@-webkit-keyframes contactAni{
+    from{margin-left: 0px}
+    to{margin-left: 21px}
+}
+@-moz-keyframes contactAni{
+    from{margin-left: 0px}
+    to{margin-left: 21px}
+}
+@-o-keyframes contactAni{
+    from{margin-left: 0px}
+    to{margin-left: 21px}
+}
 
 
 

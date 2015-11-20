@@ -19,8 +19,14 @@
                 as[0].setAttribute("class","nav_ul_a");
                 //alert(as[0].tagName); //a1
 //                as[0].removeAttribute("class", "inA");
-
             }
+            /*
+            lis[num].onmouseout = function(){
+                var as = lis[num].childNodes;
+                var as = filterSpaceNode(as);
+                as[0].setAttribute("class", "inA");
+
+            }*/
         })(i);
     }
 })();
