@@ -16,6 +16,8 @@ function addonloadEvent(func){
     }
 }
 addonloadEvent(pName);
+addonloadEvent(addA);
+addonloadEvent(filterSpaceNode);
 
 function pName(){
     var li = document.getElementsByClassName("active");

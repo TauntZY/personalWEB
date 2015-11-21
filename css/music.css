@@ -160,6 +160,10 @@
     border-bottom: 1px solid #ff776b;
     color: #FFFFFF;
 }
+/*修改默认样式*/
+:focus { outline: thin dotted invert }
+
+
 /*===========隐藏整个音乐窗口按钮==============*/
 #closeMusic{
     display: block;
