@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+
+    <meta charset="UTF-8">
+    <meta name="keyword" content="3D眼镜 眼镜 3D">
+    <meta name="description" content="关于3D眼镜产品的介绍">
+    <meta name="data" content="2015/10/12">
+    <meta name="author" content="吴志艺">
+
+    <title>3D眼镜 畅想视觉盛宴</title>
+
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquery-fullPage/2.1.8/jquery.fullPage.css">
+
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquery-fullPage/2.1.8/jquery.fullPage.min.js"></script>
+    <script src="http://libs.cdnjs.net/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="http://libs.cdnjs.net/jQuery-slimScroll/1.3.1/jquery.slimscroll.min.js"></script>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        .section{
+            text-align: center;
+        }
+        .section1{
+            background-color: #EB96EC;
+            /*background-color: orangered;*/
+            /*background: url("images/bg.jpg") no-repeat;*/
+            /*background-size: cover;*/
+        }
+        .section1 #page1_h1{
+            position: absolute;
+            left: 0px;
+            /*animation:page1_h1Animate 1s;*/
+            /*-moz-animation:page1_h1Animate 1s;*/
+            /*-webkit-animation:page1_h1Animate 1s;*/
+        }
+        .section2 #page2_h2{
+            position: absolute;
+            right:0px;
+        }
+        .section2{
+            background-color: #65AAF8;
+            /*background: url("images/bg.jpg") no-repeat;*/
+            background-size: cover;
+        }
+        .section3{
+            background-color: #44ED74;
+            /*background: url("images/bg.jpg") no-repeat;*/
+            background-size: cover;
+        }
+        .section4{
+            background-color: rosybrown;
+            /*background: url("images/bg.jpg") no-repeat;*/
+            background-size: cover;
+        }
+        #menu{
+            position: fixed;
+            margin: 0px 435px;
+            z-index: 999;
+        }
+        #menu li{
+            position: relative;
+            float: left;
+            display: block;
+            width: 100px;
+            height: 30px;
+            /*background-color: gray;*/
+            margin-right: 20px;
+            z-index: 9;
+            /*background: url("images/btnrollover.png");*/
+        }
+        #menu li:hover{
+            /*background-color: #bb00ff;*/
+        }
+        #menu li a{
+            text-decoration: none;
+            color: #ffffff;
+            text-align: center;
+            display: block;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            z-index: 1;
+        }
+        #menu span{
+            display: block;
+            background-color: gray;
+            position: absolute;
+            top: 0px;
+            width: 100px;
+            height: 30px;
+            opacity: 0.2;
+            z-index: -3;
+            /*box-shadow: 10px 10px 5px #888888;*/
+        }
+        #menu li a:hover{
+            color: #f50600;
+        }
+        #menu li.active{
+            background-color: #bb00ff;
+        }
+        #fullpage div.slide{
+            background-size: 100%!important;
+        }
+        #fullpage #slide1{
+            background:url("images/0.jpg") no-repeat ;
+        }
+        #fullpage #slide2{
+            background:url("images/6.jpg") no-repeat;
+        }
+        #fullpage #slide3{
+            background:url("images/9.JPG") no-repeat;
+        }
+        #fullpage #slide4{
+            background:url("images/1.jpg") no-repeat;
+        }
+        
+        
+        
+
+        @keyframes page1_h1Animate{
+            0%{
+                left: -400px;
+            }
+            100%{
+                left: 470px;
+            }
+        }
+        @-webkit-keyframes  page1_h1Animate{
+            0%{
+                left: -400px;
+            }
+            100%{
+                left: 470px;
+            }
+        }
+        @-moz-keyframes page1_h1Animate{
+            0%{
+                left: -400px;
+            }
+            100%{
+                left: 470px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!--menu开始-->
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">首页<span></span></a></li>
+        <li data-menuanchor="page2"><a href="#page2">产品介绍<span></span></a></li>
+        <li data-menuanchor="page3"><a href="#page3">详情<span></span></a></li>
+        <li data-menuanchor="page4"><a href="#page4">联系我们<span></span></a></li>
+    </ul>
+    <div id="fullpage">
+        <div class="section section1">
+            <h1 id="page1_h1">它，是身临其境的神奇体验</h1>
+        </div>
+        <div class="section section2">
+            <h1>FULLPAGE页面二</h1>
+            <h1 id="page2_h2">它，是身临其境的神奇体验</h1>
+        </div>
+        <div class="section section3">
+            <div class="slide" id="slide1">slide1</div>
+            <div class="slide" id="slide2">slide2</div>
+            <div class="slide" id="slide3">slide3</div>
+            <div class="slide" id="slide4">slide4</div>
+        </div>
+        <div class="section section4">
+            <h1>FULLPAGE页面四</h1>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("#fullpage").fullpage({
+                anchors:["page1","page2","page3","page4"],
+                lockAnchors:true,
+                menu:"#menu",
+                fixedElements:"#menu",
+                afterRender:function(){
+                    $(".section1 #page1_h1").delay(0).animate({
+                        left:"470px"
+                    },500)
+                },
+                afterLoad:function(anchorLink,index){
+                    if(index == 1 ){
+                        $(".section1 #page1_h1").delay(0).animate({
+                            left:"470px"
+                        },500)
+                    }
+                    if(index == 2 ){
+                        $(".section2 #page2_h2").delay(0).animate({
+                            right:"470px"
+                        },500)
+                    }
+                },
+//                afterRender:function(anchorLink,index){
+//                    if(index == 1 ){
+//                        $(".section1 #page1_h1").delay(500).animate({
+//                            left:"470px"
+//                        },1000)
+//                    }
+//                },
+                onLeave:function(index){
+                    if(index == 1){
+                        $(".section1 #page1_h1").delay(100).animate({
+                            left:"0px"
+                        },500)
+                    }
+                    if(index == 2 ){
+                        $(".section2 #page2_h2").delay(100).animate({
+                            right:"0px"
+                        },500)
+                    }
+                }
+            });
+        });
+
+//        //加载代码块
+//        function addLoadEvent(func){
+//            var oldonload = window.onload;
+//            if(typeof oldonload != "function"){
+//                window.onload = func;
+//            }
+//            else{
+//                window.onload = function(){
+//                    oldonload();
+//                    func();
+//                }
+//            }
+//        }
+//        //动画实现
+//        function moveElement(elementID,final_x,final_y,interval) {
+//            if (!document.getElementById) return false;
+//            if (!document.getElementById(elementID)) return false;
+//            var elem = document.getElementById(elementID);
+//            var xpos = parseInt(elem.style.left);
+//            var ypos = parseInt(elem.style.top);
+//            if (xpos == final_x && ypos == final_y) {
+//                return true;
+//            }
+//            if (xpos < final_x) {
+//                xpos++;
+//            }
+//            if (xpos > final_x) {
+//                xpos--;
+//            }
+//            if (ypos < final_y) {
+//                ypos++;
+//            }
+//            if (ypos > final_y) {
+//                ypos--;
+//            }
+//            elem.style.left = xpos + "px";
+//            elem.style.top = ypos + "px";
+//            var repeat = "moveElement('"+elementID+"',"+final_x+","+final_y+","+interval+")";
+//            movement = setTimeout(repeat,interval);
+//        }
+//        //获取元素，并将元素的position设为absolute,并初始化元素位置
+//        function positionMessage() {
+//            var H = window.screen.height;
+//            var W = window.screen.width;
+//            if (!document.getElementById) return false;
+//            if (!document.getElementById("page1_h1")) return false;
+//            var elem = document.getElementById("page1_h1");
+//            elem.style.position = "absolute";
+//            elem.style.left = "-400px";
+//            elem.style.top = H/3 + "px";
+//            moveElement("page1_h1",W/3,H/3,0.1);
+//        }
+//        addLoadEvent(moveElement);
+//        addLoadEvent(positionMessage);
+    </script>
+</body>
+</html>
